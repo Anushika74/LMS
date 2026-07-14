@@ -86,8 +86,8 @@ public class ProfileActivity extends AppCompatActivity {
         if (currentUser != null) {
             binding.etFullName.setText(currentUser.getFullName());
             binding.etEmail.setText(currentUser.getEmail());
-            binding.tvRole.setText(currentUser.getRole().substring(0, 1).toUpperCase() +
-                    currentUser.getRole().substring(1));
+            binding.tvHeaderName.setText(currentUser.getFullName());
+            binding.tvRole.setText(capitalize(currentUser.getRole()));
 
             if (currentUser.getProfileImage() != null && !currentUser.getProfileImage().isEmpty()) {
                 File imgFile = new File(currentUser.getProfileImage());
@@ -97,12 +97,26 @@ public class ProfileActivity extends AppCompatActivity {
             }
 
             // Show student ID or designation
-            if (currentUser.isStudent() && currentUser.getStudentId() != null) {
+            if (currentUser.isStudent() && currentUser.getStudentId() != null
+                    && !currentUser.getStudentId().isEmpty()) {
                 binding.tvExtraInfo.setText("Student ID: " + currentUser.getStudentId());
-            } else if (currentUser.isLecturer() && currentUser.getDesignation() != null) {
+                binding.tvExtraInfo.setVisibility(android.view.View.VISIBLE);
+            } else if (currentUser.isLecturer() && currentUser.getDesignation() != null
+                    && !currentUser.getDesignation().isEmpty()) {
                 binding.tvExtraInfo.setText(currentUser.getDesignation());
+                binding.tvExtraInfo.setVisibility(android.view.View.VISIBLE);
+            } else {
+                binding.tvExtraInfo.setVisibility(android.view.View.GONE);
             }
         }
+    }
+
+    /**
+     * Capitalize the first letter of a string safely (handles null/empty).
+     */
+    private String capitalize(String text) {
+        if (text == null || text.isEmpty()) return "";
+        return text.substring(0, 1).toUpperCase() + text.substring(1);
     }
 
     private void selectImage() {
@@ -114,6 +128,10 @@ public class ProfileActivity extends AppCompatActivity {
     private void saveProfile() {
         String fullName = binding.etFullName.getText().toString().trim();
         String email = binding.etEmail.getText().toString().trim();
+
+        // Clear any previous errors before re-validating
+        binding.tilFullName.setError(null);
+        binding.tilEmail.setError(null);
 
         if (!ValidationUtils.isValidName(fullName)) {
             binding.tilFullName.setError("Please enter a valid name");
@@ -132,8 +150,11 @@ public class ProfileActivity extends AppCompatActivity {
 
         boolean success = dbHelper.updateUserProfile(currentUser.getId(), fullName, email, null);
         if (success) {
+            currentUser.setFullName(fullName);
+            currentUser.setEmail(email);
             sessionManager.updateName(fullName);
             sessionManager.updateEmail(email);
+            binding.tvHeaderName.setText(fullName);
             Toast.makeText(this, "Profile updated successfully", Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(this, "Failed to update profile", Toast.LENGTH_SHORT).show();

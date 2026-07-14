@@ -28,6 +28,7 @@
     <string name="cancel">Cancel</string>
     <string name="delete">Delete</string>
     <string name="edit">Edit</string>
+    <string name="view">View</string>
     <string name="upload_manage">Upload &amp; Manage</string>
     <string name="create_manage">Create &amp; Manage</string>
     <string name="post_manage">Post &amp; Manage</string>

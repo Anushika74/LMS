@@ -87,6 +87,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="Dashboard Statistics"
+                android:textColor="@color/text_primary"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -103,86 +104,122 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_columnWeight="1"
-                    android:layout_margin="4dp"
-                    app:cardCornerRadius="12dp">
+                    android:layout_margin="6dp"
+                    app:cardBackgroundColor="@color/card_background"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp">
                     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                        android:orientation="vertical" android:padding="12dp" android:gravity="center">
+                        android:orientation="vertical" android:padding="14dp" android:gravity="center">
+                        <ImageView android:layout_width="40dp" android:layout_height="40dp"
+                            android:background="@drawable/circle_bg_light" android:padding="9dp"
+                            android:src="@drawable/ic_courses" app:tint="@color/primary_blue" />
                         <TextView android:id="@+id/tvTotalCourses" android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:text="0" android:textSize="20sp" android:textStyle="bold" android:textColor="@color/primary_blue" />
+                            android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="0"
+                            android:textSize="22sp" android:textStyle="bold" android:textColor="@color/text_primary" />
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Courses" android:textSize="11sp" />
+                            android:text="Courses" android:textSize="12sp" android:textColor="@color/text_secondary" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_columnWeight="1" android:layout_margin="4dp" app:cardCornerRadius="12dp">
+                    android:layout_columnWeight="1" android:layout_margin="6dp"
+                    app:cardBackgroundColor="@color/card_background" app:cardCornerRadius="16dp" app:cardElevation="2dp">
                     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                        android:orientation="vertical" android:padding="12dp" android:gravity="center">
+                        android:orientation="vertical" android:padding="14dp" android:gravity="center">
+                        <ImageView android:layout_width="40dp" android:layout_height="40dp"
+                            android:background="@drawable/circle_bg_light" android:padding="9dp"
+                            android:src="@drawable/ic_module" app:tint="@color/primary_blue" />
                         <TextView android:id="@+id/tvTotalModules" android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:text="0" android:textSize="20sp" android:textStyle="bold" android:textColor="@color/primary_blue" />
+                            android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="0"
+                            android:textSize="22sp" android:textStyle="bold" android:textColor="@color/text_primary" />
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Modules" android:textSize="11sp" />
+                            android:text="Modules" android:textSize="12sp" android:textColor="@color/text_secondary" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_columnWeight="1" android:layout_margin="4dp" app:cardCornerRadius="12dp">
+                    android:layout_columnWeight="1" android:layout_margin="6dp"
+                    app:cardBackgroundColor="@color/card_background" app:cardCornerRadius="16dp" app:cardElevation="2dp">
                     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                        android:orientation="vertical" android:padding="12dp" android:gravity="center">
+                        android:orientation="vertical" android:padding="14dp" android:gravity="center">
+                        <ImageView android:layout_width="40dp" android:layout_height="40dp"
+                            android:background="@drawable/circle_bg_light" android:padding="9dp"
+                            android:src="@drawable/ic_note" app:tint="@color/primary_blue" />
                         <TextView android:id="@+id/tvTotalNotes" android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:text="0" android:textSize="20sp" android:textStyle="bold" android:textColor="@color/primary_blue" />
+                            android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="0"
+                            android:textSize="22sp" android:textStyle="bold" android:textColor="@color/text_primary" />
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Notes" android:textSize="11sp" />
+                            android:text="Notes" android:textSize="12sp" android:textColor="@color/text_secondary" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_columnWeight="1" android:layout_margin="4dp" app:cardCornerRadius="12dp">
+                    android:layout_columnWeight="1" android:layout_margin="6dp"
+                    app:cardBackgroundColor="@color/card_background" app:cardCornerRadius="16dp" app:cardElevation="2dp">
                     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                        android:orientation="vertical" android:padding="12dp" android:gravity="center">
+                        android:orientation="vertical" android:padding="14dp" android:gravity="center">
+                        <ImageView android:layout_width="40dp" android:layout_height="40dp"
+                            android:background="@drawable/circle_bg_light" android:padding="9dp"
+                            android:src="@drawable/ic_past_paper" app:tint="@color/primary_blue" />
                         <TextView android:id="@+id/tvTotalPastPapers" android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:text="0" android:textSize="20sp" android:textStyle="bold" android:textColor="@color/primary_blue" />
+                            android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="0"
+                            android:textSize="22sp" android:textStyle="bold" android:textColor="@color/text_primary" />
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Papers" android:textSize="11sp" />
+                            android:text="Papers" android:textSize="12sp" android:textColor="@color/text_secondary" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_columnWeight="1" android:layout_margin="4dp" app:cardCornerRadius="12dp">
+                    android:layout_columnWeight="1" android:layout_margin="6dp"
+                    app:cardBackgroundColor="@color/card_background" app:cardCornerRadius="16dp" app:cardElevation="2dp">
                     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                        android:orientation="vertical" android:padding="12dp" android:gravity="center">
+                        android:orientation="vertical" android:padding="14dp" android:gravity="center">
+                        <ImageView android:layout_width="40dp" android:layout_height="40dp"
+                            android:background="@drawable/circle_bg_light" android:padding="9dp"
+                            android:src="@drawable/ic_assignment" app:tint="@color/primary_blue" />
                         <TextView android:id="@+id/tvTotalAssignments" android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:text="0" android:textSize="20sp" android:textStyle="bold" android:textColor="@color/primary_blue" />
+                            android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="0"
+                            android:textSize="22sp" android:textStyle="bold" android:textColor="@color/text_primary" />
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Assign." android:textSize="11sp" />
+                            android:text="Assign." android:textSize="12sp" android:textColor="@color/text_secondary" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_columnWeight="1" android:layout_margin="4dp" app:cardCornerRadius="12dp">
+                    android:layout_columnWeight="1" android:layout_margin="6dp"
+                    app:cardBackgroundColor="@color/card_background" app:cardCornerRadius="16dp" app:cardElevation="2dp">
                     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                        android:orientation="vertical" android:padding="12dp" android:gravity="center">
+                        android:orientation="vertical" android:padding="14dp" android:gravity="center">
+                        <ImageView android:layout_width="40dp" android:layout_height="40dp"
+                            android:background="@drawable/circle_bg_light" android:padding="9dp"
+                            android:src="@drawable/ic_quiz" app:tint="@color/primary_blue" />
                         <TextView android:id="@+id/tvTotalQuizzes" android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:text="0" android:textSize="20sp" android:textStyle="bold" android:textColor="@color/primary_blue" />
+                            android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="0"
+                            android:textSize="22sp" android:textStyle="bold" android:textColor="@color/text_primary" />
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Quizzes" android:textSize="11sp" />
+                            android:text="Quizzes" android:textSize="12sp" android:textColor="@color/text_secondary" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_columnWeight="1" android:layout_margin="4dp" app:cardCornerRadius="12dp">
+                    android:layout_columnWeight="1" android:layout_margin="6dp"
+                    app:cardBackgroundColor="@color/card_background" app:cardCornerRadius="16dp" app:cardElevation="2dp">
                     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                        android:orientation="vertical" android:padding="12dp" android:gravity="center">
+                        android:orientation="vertical" android:padding="14dp" android:gravity="center">
+                        <ImageView android:layout_width="40dp" android:layout_height="40dp"
+                            android:background="@drawable/circle_bg_light" android:padding="9dp"
+                            android:src="@drawable/ic_notice" app:tint="@color/primary_blue" />
                         <TextView android:id="@+id/tvTotalNotices" android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" android:text="0" android:textSize="20sp" android:textStyle="bold" android:textColor="@color/primary_blue" />
+                            android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="0"
+                            android:textSize="22sp" android:textStyle="bold" android:textColor="@color/text_primary" />
                         <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-                            android:text="Notices" android:textSize="11sp" />
+                            android:text="Notices" android:textSize="12sp" android:textColor="@color/text_secondary" />
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
             </GridLayout>
@@ -193,6 +230,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:text="Quick Actions"
+                android:textColor="@color/text_primary"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
