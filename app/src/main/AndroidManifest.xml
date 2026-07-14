@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="ATI LMS"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ATILMS"
+        android:requestLegacyExternalStorage="true"
+        tools:targetApi="34">
+
+        <activity
+            android:name=".activities.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ATILMS.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activities.LoginActivity" />
+        <activity android:name=".activities.RegistrationActivity" />
+        <activity android:name=".activities.StudentRegistrationActivity" />
+        <activity android:name=".activities.LecturerRegistrationActivity" />
+        <activity android:name=".activities.ForgotPasswordActivity" />
+        <activity android:name=".activities.StudentDashboardActivity" />
+        <activity android:name=".activities.LecturerDashboardActivity" />
+        <activity android:name=".activities.CourseListActivity" />
+        <activity android:name=".activities.YearListActivity" />
+        <activity android:name=".activities.SemesterListActivity" />
+        <activity android:name=".activities.ModuleListActivity" />
+        <activity android:name=".activities.NotesActivity" />
+        <activity android:name=".activities.PastPapersActivity" />
+        <activity android:name=".activities.AssignmentsActivity" />
+        <activity android:name=".activities.QuizListActivity" />
+        <activity android:name=".activities.QuizAttemptActivity" />
+        <activity android:name=".activities.QuizResultActivity" />
+        <activity android:name=".activities.NoticesActivity" />
+        <activity android:name=".activities.ProfileActivity" />
+        <activity android:name=".activities.LecturerManagementActivity" />
+        <activity android:name=".activities.LecturerNotesActivity" />
+        <activity android:name=".activities.LecturerPastPapersActivity" />
+        <activity android:name=".activities.LecturerAssignmentsActivity" />
+        <activity android:name=".activities.LecturerQuizActivity" />
+        <activity android:name=".activities.CreateQuizActivity" />
+        <activity android:name=".activities.LecturerNoticesActivity" />
+        <activity android:name=".activities.LecturerModulesActivity" />
+        <activity android:name=".activities.NotificationsActivity" />
+        <activity android:name=".activities.ModuleResourcesActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+    </application>
+</manifest>

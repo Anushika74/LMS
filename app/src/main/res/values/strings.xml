@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">ATI LMS</string>
+    <string name="ati_full">Advanced Technological Institute</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="full_name">Full Name</string>
+    <string name="student_id">Student ID</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="remember_me">Remember me</string>
+    <string name="logout">Logout</string>
+    <string name="courses">Courses</string>
+    <string name="modules">Modules</string>
+    <string name="notes">Notes</string>
+    <string name="past_papers">Past Papers</string>
+    <string name="assignments">Assignments</string>
+    <string name="quizzes">Quizzes</string>
+    <string name="notices">Notices</string>
+    <string name="profile">Profile</string>
+    <string name="home">Home</string>
+    <string name="management">Management</string>
+    <string name="search">Search</string>
+    <string name="download">Download</string>
+    <string name="upload">Upload</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="upload_manage">Upload &amp; Manage</string>
+    <string name="create_manage">Create &amp; Manage</string>
+    <string name="post_manage">Post &amp; Manage</string>
+    <string name="add_manage">Add &amp; Manage</string>
+    <string name="back">Back</string>
+</resources>
