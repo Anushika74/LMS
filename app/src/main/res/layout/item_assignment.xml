@@ -4,19 +4,33 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
-    app:cardCornerRadius="8dp"
-    app:cardElevation="2dp">
+    app:cardBackgroundColor="@color/card_background"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp"
+    app:rippleColor="@color/primary_light">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp">
 
+        <ImageView
+            android:id="@+id/ivAssignmentIcon"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/tvAssignmentTitle"
+            android:background="@drawable/circle_bg_light"
+            android:padding="9dp"
+            android:src="@drawable/ic_assignment"
+            app:tint="@color/primary_blue" />
+
         <TextView
             android:id="@+id/tvAssignmentTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
+            android:layout_marginStart="56dp"
             android:layout_toStartOf="@+id/llActions"
             android:textColor="@color/text_primary"
             android:textSize="16sp"
@@ -27,10 +41,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tvAssignmentTitle"
-            android:layout_alignParentStart="true"
+            android:layout_alignStart="@id/tvAssignmentTitle"
             android:layout_marginTop="4dp"
             android:layout_toStartOf="@+id/llActions"
-            android:textColor="@android:color/darker_gray"
+            android:textColor="@color/text_secondary"
             android:textSize="14sp" />
 
         <TextView
@@ -38,8 +52,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tvAssignmentDescription"
-            android:layout_alignParentStart="true"
+            android:layout_alignStart="@id/tvAssignmentTitle"
             android:layout_marginTop="8dp"
+            android:textColor="@color/text_secondary"
             android:textSize="12sp" />
 
         <TextView
@@ -47,7 +62,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/tvDueDate"
-            android:layout_alignParentStart="true"
+            android:layout_alignStart="@id/tvAssignmentTitle"
             android:layout_marginTop="2dp"
             android:textSize="12sp"
             android:textStyle="bold" />
@@ -65,16 +80,18 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@android:drawable/ic_menu_view"
-                app:tint="#1565C0" />
+                android:contentDescription="@string/view"
+                android:src="@drawable/ic_view"
+                app:tint="@color/primary_blue" />
 
             <ImageButton
                 android:id="@+id/btnDownload"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:src="@android:drawable/stat_sys_download"
-                app:tint="#4CAF50" />
+                android:contentDescription="@string/download"
+                android:src="@drawable/ic_download"
+                app:tint="@color/success_green" />
         </LinearLayout>
 
     </RelativeLayout>
